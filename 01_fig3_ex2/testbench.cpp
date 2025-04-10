@@ -1,0 +1,24 @@
+#include "kernel.hpp"
+#include <stdio.h>
+
+#define DATA_SIZE 2025
+
+int data[MAX_DATA_SIZE];
+
+int main() {
+  int expected = 0;
+  for (int i = 0; i < MAX_DATA_SIZE; i++) {
+    data[i] = (i != DATA_SIZE) ? i + 1 : 0;
+    expected += (i < DATA_SIZE) ? i + 1 : 0;
+  }
+
+  int sum_out = 0;
+  kernel(&sum_out, data);
+
+  fprintf(stderr, "Expected: %7d\n", expected);
+  fprintf(stderr, "  Actual: %7d\n", sum_out);
+
+  // For Vitis HLS to execute C/RTL co-simulation, it requires that the C
+  // testbench return exit code 0.
+  return 0;
+}
