@@ -9,19 +9,19 @@ INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/usr/scratch/rsarkar30/Vitis_HLS/2021.1/bin/unwrapped/lnx64.o/vitis_hls'
 INFO: [HLS 200-10] For user 'rsarkar30' on host 'chao-srv1.ece.gatech.edu' (Linux_x86_64 version 4.18.0-553.44.1.el8_10.x86_64) on Fri Apr 11 02:49:29 EDT 2025
 INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.10 (Ootpa)"
-INFO: [HLS 200-10] In directory '/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b'
+INFO: [HLS 200-10] In directory '/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b'
 Sourcing Tcl script 'hls.tcl'
 INFO: [HLS 200-1510] Running: open_project -reset project 
-INFO: [HLS 200-10] Creating and opening project '/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project'.
+INFO: [HLS 200-10] Creating and opening project '/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project'.
 INFO: [HLS 200-1510] Running: set_top kernel 
 INFO: [HLS 200-1510] Running: add_files kernel.cpp 
 INFO: [HLS 200-10] Adding design file 'kernel.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb testbench.cpp 
 INFO: [HLS 200-10] Adding test bench file 'testbench.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution -reset solution1 
-INFO: [HLS 200-10] Creating and opening solution '/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1'.
+INFO: [HLS 200-10] Creating and opening solution '/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1'.
 INFO: [HLS 200-10] Cleaning up the solution database.
-WARNING: [HLS 200-40] No /export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/solution1.aps file found.
+WARNING: [HLS 200-40] No /export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/solution1.aps file found.
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.1;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1510] Running: set_part xcvu9p-flga2104-2-i 
@@ -183,34 +183,34 @@ Multi-threading is on. Using 62 slave threads.
 WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
     CPATH
     LIBRARY_PATH
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/kernel.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/kernel.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_kernel_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/AESL_automem_data.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/AESL_automem_data.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_automem_data
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/kernel_producer_Pipeline_VITIS_LOOP_8_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/kernel_producer_Pipeline_VITIS_LOOP_8_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module kernel_producer_Pipeline_VITIS_LOOP_8_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/kernel_producer.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/kernel_producer.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module kernel_producer
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/kernel_consumer.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/kernel_consumer.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module kernel_consumer
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/kernel.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/kernel.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module kernel
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/kernel_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/kernel_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module kernel_flow_control_loop_pipe_sequential_init
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/kernel_mul_32s_34ns_65_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/kernel_mul_32s_34ns_65_1_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module kernel_mul_32s_34ns_65_1_1
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/kernel_fifo_w32_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/kernel_fifo_w32_d2_S.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module kernel_fifo_w32_d2_S_shiftReg
 INFO: [VRFC 10-311] analyzing module kernel_fifo_w32_d2_S
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dataflow_monitor
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -247,7 +247,7 @@ Built simulation snapshot kernel
   **** IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source /export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/xsim.dir/kernel/webtalk/xsim_webtalk.tcl -notrace
+source /export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/xsim.dir/kernel/webtalk/xsim_webtalk.tcl -notrace
 INFO: [Common 17-206] Exiting Webtalk at Fri Apr 11 02:50:21 2025...
 
 ****** xsim v2021.1.1 (64-bit)
@@ -269,7 +269,7 @@ source kernel.tcl
 // RTL Simulation : 0 / 1 [n/a] @ "113000"
 // RTL Simulation : 1 / 1 [n/a] @ "20433000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 20462500 ps : File "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/04_fig3_ex4b/project/solution1/sim/verilog/kernel.autotb.v" Line 471
+$finish called at time : 20462500 ps : File "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/05_fig3_ex4b/project/solution1/sim/verilog/kernel.autotb.v" Line 471
 ## quit
 INFO: [Common 17-206] Exiting xsim at Fri Apr 11 02:50:54 2025...
 INFO: [COSIM 212-316] Starting C post checking ...
