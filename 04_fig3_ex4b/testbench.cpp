@@ -1,7 +1,7 @@
 #include "kernel.hpp"
 #include <stdio.h>
 
-#define DATA_SIZE 2025
+#define DATA_SIZE 4050
 
 int data[MAX_DATA_SIZE];
 
