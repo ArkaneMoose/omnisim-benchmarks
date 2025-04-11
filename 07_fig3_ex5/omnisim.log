@@ -5,5 +5,5 @@ processed_by_P1 = 1351
 processed_by_P2 = 674
 sum_out_P1 = 1366878
 sum_out_P2 = 684447
-Front-end compilation time: 1.773417 seconds
-Multi-threaded execution time: 0.332438 seconds
+Front-end compilation time: 1.753140 seconds
+Multi-threaded execution time: 0.346521 seconds

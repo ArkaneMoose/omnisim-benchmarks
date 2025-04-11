@@ -3,7 +3,7 @@
 
 #include <ap_fixed.h>
 
-#define N 506
+#define N 2025
 
 typedef ap_fixed<32, 16> data_t;
 

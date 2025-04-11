@@ -7,7 +7,7 @@
 source /usr/scratch/rsarkar30/Vitis_HLS/2021.1/scripts/vitis_hls/hls.tcl -notrace
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/usr/scratch/rsarkar30/Vitis_HLS/2021.1/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'rsarkar30' on host 'chao-srv1.ece.gatech.edu' (Linux_x86_64 version 4.18.0-553.44.1.el8_10.x86_64) on Fri Apr 11 02:47:58 EDT 2025
+INFO: [HLS 200-10] For user 'rsarkar30' on host 'chao-srv1.ece.gatech.edu' (Linux_x86_64 version 4.18.0-553.44.1.el8_10.x86_64) on Fri Apr 11 15:28:52 EDT 2025
 INFO: [HLS 200-10] On os "Red Hat Enterprise Linux release 8.10 (Ootpa)"
 INFO: [HLS 200-10] In directory '/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/03_fig3_ex4a'
 Sourcing Tcl script 'hls.tcl'
@@ -34,14 +34,14 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
    Compiling ../../../../testbench.cpp in debug mode
    Compiling ../../../../kernel.cpp in debug mode
    Generating csim.exe
-sum_out = 8203275
+sum_out = 2051325
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.69 seconds. CPU system time: 0.33 seconds. Elapsed time: 1.15 seconds; current allocated memory: 243.196 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.6 seconds. CPU system time: 0.3 seconds. Elapsed time: 1.1 seconds; current allocated memory: 243.196 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 243.414 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 243.414 MB.
 INFO: [HLS 200-10] Analyzing design file 'kernel.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.23 seconds. CPU system time: 0.31 seconds. Elapsed time: 0.6 seconds; current allocated memory: 244.989 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.2 seconds. CPU system time: 0.29 seconds. Elapsed time: 0.54 seconds; current allocated memory: 244.989 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 214-279] Initial Interval estimation mode is set into default.
 INFO: [HLS 214-284] Auto array partition mode is set into default.
@@ -51,12 +51,12 @@ INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read(int&)' into 'hl
 INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read()' into 'consumer(hls::stream<int, 0>&, int*)' (kernel.cpp:21:24)
 INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::stream()' into 'kernel(int*, int const*)' (kernel.cpp:30:14)
 INFO: [HLS 214-270] Starting automatic array partition analysis...
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.05 seconds. CPU system time: 0.53 seconds. Elapsed time: 5.58 seconds; current allocated memory: 246.084 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.26 seconds. CPU system time: 0.55 seconds. Elapsed time: 4.83 seconds; current allocated memory: 246.084 MB.
 INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 246.085 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 247.400 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 247.399 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 246.751 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 246.749 MB.
 INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_8_1' (kernel.cpp:8) in function 'producer' automatically.
 WARNING: [HLS 200-805] An internal stream 'FIFO' (kernel.cpp:30) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
 WARNING: [HLS 200-786] Detected dataflow-on-top in function  'kernel' (kernel.cpp:28)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
@@ -64,9 +64,9 @@ Resolution: For help on HLS 200-786 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.
 INFO: [XFORM 203-712] Applying dataflow to function 'kernel' (kernel.cpp:28), detected/extracted 2 process function(s): 
 	 'producer'
 	 'consumer'.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.04 seconds; current allocated memory: 267.485 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 267.484 MB.
 WARNING: [HLS 200-1449] Process consumer has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 288.989 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 288.988 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'kernel' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -76,25 +76,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_8_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_8_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 289.311 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 289.310 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 289.424 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 289.424 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'producer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.488 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.487 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 289.574 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.573 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'consumer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -102,42 +102,42 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_15_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 3, Final II = 3, Depth = 3, loop 'VITIS_LOOP_15_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.693 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.693 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.843 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.844 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'kernel' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.903 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 289.902 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 290.002 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 290.002 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'producer_Pipeline_VITIS_LOOP_8_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'producer_Pipeline_VITIS_LOOP_8_1' pipeline 'VITIS_LOOP_8_1' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'producer_Pipeline_VITIS_LOOP_8_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 290.266 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 290.264 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'producer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Finished creating RTL model for 'producer'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 290.816 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 290.815 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'consumer' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'mul_32s_34ns_65_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'consumer'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 291.292 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 291.291 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'kernel' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -145,15 +145,15 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'kernel/sum_out' to 'ap_ovl
 INFO: [RTGEN 206-500] Setting interface mode on port 'kernel/data' to 'ap_memory'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'kernel' to 'ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 292.006 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 292.002 MB.
 INFO: [RTMG 210-285] Implementing FIFO 'FIFO_U(kernel_fifo_w32_d2_S)' using Shift Registers.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.26 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.29 seconds; current allocated memory: 294.026 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 297.152 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.25 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.31 seconds; current allocated memory: 294.023 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.23 seconds; current allocated memory: 297.102 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for kernel.
 INFO: [VLOG 209-307] Generating Verilog RTL for kernel.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 303.62 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6.29 seconds. CPU system time: 0.97 seconds. Elapsed time: 7.37 seconds; current allocated memory: 297.138 MB.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.47 seconds. CPU system time: 0.98 seconds. Elapsed time: 6.57 seconds; current allocated memory: 297.088 MB.
 INFO: [HLS 200-1510] Running: cosim_design 
 WARNING: [COSIM 212-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging.
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
@@ -161,11 +161,11 @@ INFO: [COSIM 212-14] Instrumenting C test bench ...
    Build using "/usr/scratch/rsarkar30/Vitis_HLS/2021.1/tps/lnx64/gcc-6.2.0/bin/g++"
    Compiling kernel.cpp_pre.cpp.tb.cpp
    Compiling testbench.cpp_pre.cpp.tb.cpp
-   Compiling apatb_kernel.cpp
    Compiling apatb_kernel_ir.ll
+   Compiling apatb_kernel.cpp
    Generating cosim.tv.exe
 INFO: [COSIM 212-302] Starting C TB testing ... 
-sum_out = 8203275
+sum_out = 2051325
 INFO: [COSIM 212-333] Generating C post check test bench ...
 INFO: [COSIM 212-12] Generating RTL test bench ...
 INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
@@ -243,7 +243,7 @@ Built simulation snapshot kernel
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source /export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/03_fig3_ex4a/project/solution1/sim/verilog/xsim.dir/kernel/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Fri Apr 11 02:48:49 2025...
+INFO: [Common 17-206] Exiting Webtalk at Fri Apr 11 15:29:41 2025...
 
 ****** xsim v2021.1.1 (64-bit)
   **** SW Build 3286242 on Wed Jul 28 13:09:46 MDT 2021
@@ -262,15 +262,15 @@ source kernel.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 1 [n/a] @ "113000"
-// RTL Simulation : 1 / 1 [n/a] @ "20433000"
+// RTL Simulation : 1 / 1 [n/a] @ "10308000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 20462500 ps : File "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/03_fig3_ex4a/project/solution1/sim/verilog/kernel.autotb.v" Line 347
+$finish called at time : 10337500 ps : File "/export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/03_fig3_ex4a/project/solution1/sim/verilog/kernel.autotb.v" Line 347
 ## quit
-INFO: [Common 17-206] Exiting xsim at Fri Apr 11 02:49:23 2025...
+INFO: [Common 17-206] Exiting xsim at Fri Apr 11 15:30:14 2025...
 INFO: [COSIM 212-316] Starting C post checking ...
-sum_out = 2735778
+sum_out = 684453
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
 INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 26.52 seconds. CPU system time: 3.75 seconds. Elapsed time: 72.78 seconds; current allocated memory: 302.016 MB.
-INFO: [HLS 200-112] Total CPU user time: 36.47 seconds. Total CPU system time: 5.97 seconds. Total elapsed time: 86.78 seconds; peak allocated memory: 297.152 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Fri Apr 11 02:49:24 2025...
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 24.23 seconds. CPU system time: 3.32 seconds. Elapsed time: 70.74 seconds; current allocated memory: 302.012 MB.
+INFO: [HLS 200-112] Total CPU user time: 33.07 seconds. Total CPU system time: 5.14 seconds. Total elapsed time: 83.34 seconds; peak allocated memory: 297.102 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Fri Apr 11 15:30:15 2025...
