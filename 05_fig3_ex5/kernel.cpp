@@ -49,11 +49,11 @@ void kernel(const int ins[N], int &processed_by_P1, int &processed_by_P2,
 }
 
 int process_it_fast(int instr) {
-#pragma HLS latency min = 2
-  return instr / 2;
+#pragma HLS LATENCY min = 2
+  return instr / 3;
 }
 
 int process_it_slow(int instr) {
-#pragma HLS latency min = 4
+#pragma HLS LATENCY min = 4
   return instr / 3;
 }

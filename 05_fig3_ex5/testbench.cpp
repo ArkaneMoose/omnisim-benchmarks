@@ -6,8 +6,8 @@ int ins[N];
 int main() {
   int expected = 0;
   for (int i = 0; i < N; i++) {
-    ins[i] = (i + 1) * 6;
-    expected += (i + 1) * 3;
+    ins[i] = (i + 1) * 3;
+    expected += i + 1;
   }
 
   int processed_by_P1 = 0;
