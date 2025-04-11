@@ -31,11 +31,11 @@ void kernel(int *sum_out, const int data[MAX_DATA_SIZE]) {
   stream<bool> done_signal;
 
   // N.B.: For Vitis HLS to execute C/RTL co-simulation, it requires that the C
-  // testbench pass with no errors. Since producer() will run off the end of the
-  // input array and crash under C simulation, this will not work. For this
-  // reason, we guard the producer() with a #ifdef __SYNTHESIS__ directive. Rest
-  // assured, OmniSim uses the version of this code compiled for synthesis and
-  // will correctly execute the producer() call.
+  // testbench pass with no errors. Under C simulation, producer() will either
+  // get stuck in the infinite loop, or it will run off the end of the input
+  // array and crash, so this will not work. For this reason, we guard the
+  // producer() with a #ifdef __SYNTHESIS__ directive. Rest assured, OmniSim
+  // uses the code compiled for synthesis and will correctly call producer().
 #ifdef __SYNTHESIS__
   producer(FIFO, done_signal, data);
 #else
