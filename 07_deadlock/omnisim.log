@@ -1,0 +1,9 @@
+warning: ignoring debug info with an invalid version (0) in 
+warning: ignoring debug info with an invalid version (0) in /export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/07_deadlock/project/solution1/.autopilot/db/a.o.3.bc
+
+thread 'omnisim' panicked at omnisim/runtime/handler.rs:1017:48:
+unresolvable deadlock detected
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Testbench exited with code -6
+Front-end compilation time: 1.761111 seconds
+Multi-threaded execution time: 0.425355 seconds
