@@ -13,8 +13,8 @@ int main() {
   int sum = 0;
   kernel(&sum, data_in);
 
-  fprintf(stderr, "Expected: %7d\n", expected);
-  fprintf(stderr, "  Actual: %7d\n", sum);
+  printf("Expected: %7d\n", expected);
+  printf("  Actual: %7d\n", sum);
 
   // For Vitis HLS to execute C/RTL co-simulation, it requires that the C
   // testbench return exit code 0.

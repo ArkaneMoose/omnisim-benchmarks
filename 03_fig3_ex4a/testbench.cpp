@@ -15,8 +15,8 @@ int main() {
   int sum_out = 0;
   kernel(&sum_out, data);
 
-  fprintf(stderr, "Expected: <%7d (timing-sensitive)\n", expected);
-  fprintf(stderr, "  Actual:  %7d\n", sum_out);
+  printf("Expected: <%7d (timing-sensitive)\n", expected);
+  printf("  Actual:  %7d\n", sum_out);
 
   // For Vitis HLS to execute C/RTL co-simulation, it requires that the C
   // testbench return exit code 0.

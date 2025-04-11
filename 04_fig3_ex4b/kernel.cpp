@@ -27,8 +27,8 @@ void consumer(stream<int> &FIFO, stream<bool> &done_signal, int *sum_out) {
 // kernel). You can imagine that this is a more complex operation with a
 // loop-carried dependency that takes several cycles to complete.
 #pragma HLS PIPELINE II = 3
-    int read_value = FIFO.read() / 3;
-    *sum_out += read_value;
+    int read_value = FIFO.read();
+    *sum_out += read_value / 3;
     if (read_value == 0)
       break;
   }
