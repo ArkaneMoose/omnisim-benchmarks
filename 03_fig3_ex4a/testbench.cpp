@@ -1,13 +1,11 @@
 #include "kernel.hpp"
 #include <stdio.h>
 
-#define DATA_SIZE 4050
-
-int data[MAX_DATA_SIZE];
+int data[N];
 
 int main() {
-  for (int i = 0; i < MAX_DATA_SIZE; i++) {
-    data[i] = (i < DATA_SIZE) ? (i + 1) * 3 : 0;
+  for (int i = 0; i < N; i++) {
+    data[i] = (i + 1) * 3;
   }
 
   int sum_out = 0;

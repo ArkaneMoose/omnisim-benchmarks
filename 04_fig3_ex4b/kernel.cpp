@@ -4,23 +4,19 @@
 
 using hls::stream;
 
-void producer(stream<int> &FIFO, stream<bool> &done_signal, const int *data,
-              int &Dropped) {
-  int i = 0;
-  bool done;
-  while (true) {
+void producer(stream<int> &FIFO, const int *data, int &Dropped) {
+  for (int i = 0; i < N;) {
     if (FIFO.write_nb(data[i]))
       i++;
     else {
       i++;
       Dropped++;
     }
-    if (done_signal.read_nb(done))
-      break;
   }
+  FIFO.write(0);
 }
 
-void consumer(stream<int> &FIFO, stream<bool> &done_signal, int *sum_out) {
+void consumer(stream<int> &FIFO, int *sum_out) {
   while (true) {
 // We intentionally slow down this pipeline so that the producer's write_nb()
 // doesn't always succeed (which masks the timing-dependent behavior of this
@@ -32,24 +28,11 @@ void consumer(stream<int> &FIFO, stream<bool> &done_signal, int *sum_out) {
     if (read_value == 0)
       break;
   }
-  done_signal.write(true);
 }
 
-void kernel(int *sum_out, const int data[MAX_DATA_SIZE], int &Dropped) {
+void kernel(int *sum_out, const int data[N], int &Dropped) {
 #pragma HLS DATAFLOW
   stream<int> FIFO;
-  stream<bool> done_signal;
-
-  // N.B.: For Vitis HLS to execute C/RTL co-simulation, it requires that the C
-  // testbench pass with no errors. Since producer() will enter an infinite loop
-  // under C simulation, this will not work. For this reason, we guard the
-  // producer() with a #ifdef __SYNTHESIS__ directive. Rest assured, OmniSim
-  // uses the version of this code compiled for synthesis and will correctly
-  // execute the producer() call.
-#ifdef __SYNTHESIS__
-  producer(FIFO, done_signal, data, Dropped);
-#else
-  fprintf(stderr, "Skipping producer() in C simulation.\n");
-#endif
-  consumer(FIFO, done_signal, sum_out);
+  producer(FIFO, data, Dropped);
+  consumer(FIFO, sum_out);
 }
