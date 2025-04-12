@@ -1,0 +1,7 @@
+warning: ignoring debug info with an invalid version (0) in 
+warning: ignoring debug info with an invalid version (0) in /export/hdd/scratch/rsarkar30/lightningsim-public/benchmarks/omnisim-benchmarks/10_branch/project/solution1/.autopilot/db/a.o.3.bc
+Took 960 cycles
+fetched = 955
+executed = 51
+Front-end compilation time: 1.608012 seconds
+Multi-threaded execution time: 0.226190 seconds
